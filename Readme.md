@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/LineNumberingExample/Form1.cs) (VB: [Form1.vb](./VB/LineNumberingExample/Form1.vb))
+* [MyLayoutVisitor.cs](./CS/LineNumberingExample/MyLayoutVisitor.cs) (VB: [MyLayoutVisitor.vb](./VB/LineNumberingExample/MyLayoutVisitor.vb))
+* [MyPagePainter.cs](./CS/LineNumberingExample/MyPagePainter.cs) (VB: [MyPagePainter.vb](./VB/LineNumberingExample/MyPagePainter.vb))
+<!-- default file list end -->
 # How to enable line numbering and count the document rows
 
 
