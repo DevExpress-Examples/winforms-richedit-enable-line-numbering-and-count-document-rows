@@ -1,5 +1,6 @@
 ﻿'using DevExpress.XtraRichEdit.API.Layout;
 'using DevExpress.XtraRichEdit.API.Native;
+Imports DevExpress.Portable
 Imports DevExpress.XtraRichEdit
 Imports System
 Imports System.Collections.Generic
@@ -29,25 +30,25 @@ Namespace LineNumberingExample
 
         Private Sub RichEditControl1_DocumentLoaded(ByVal sender As Object, ByVal e As EventArgs)
             richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple
-'            #Region "#linenumbering"
-            Me.richEditControl1.Views.SimpleView.Padding = New System.Windows.Forms.Padding(60, 4, 4, 0)
-            Me.richEditControl1.Views.DraftView.Padding = New System.Windows.Forms.Padding(60, 4, 4, 0)
+            '            #Region "#linenumbering"
+            Me.richEditControl1.Views.SimpleView.Padding = New PortablePadding(60, 4, 4, 0)
+            Me.richEditControl1.Views.DraftView.Padding = New PortablePadding(60, 4, 4, 0)
             richEditControl1.Views.SimpleView.AllowDisplayLineNumbers = True
             richEditControl1.Views.DraftView.AllowDisplayLineNumbers = True
 
             richEditControl1.Document.Sections(0).LineNumbering.Start = 1
             richEditControl1.Document.Sections(0).LineNumbering.CountBy = 2
-            richEditControl1.Document.Sections(0).LineNumbering.Distance = 75F
-           richEditControl1.Document.Sections(0).LineNumbering.RestartType = DevExpress.XtraRichEdit.API.Native.LineNumberingRestart.Continuous
+            richEditControl1.Document.Sections(0).LineNumbering.Distance = 75.0F
+            richEditControl1.Document.Sections(0).LineNumbering.RestartType = DevExpress.XtraRichEdit.API.Native.LineNumberingRestart.Continuous
 
             richEditControl1.Document.CharacterStyles("Line Number").FontName = "Courier"
             richEditControl1.Document.CharacterStyles("Line Number").FontSize = 10
             richEditControl1.Document.CharacterStyles("Line Number").ForeColor = Color.DarkGray
             richEditControl1.Document.CharacterStyles("Line Number").Bold = True
-'            #End Region ' #linenumbering
+            '            #End Region ' #linenumbering
         End Sub
 
-        #Region "#BeforePagePaint"
+#Region "#BeforePagePaint"
         Private Sub RichEditControl1_BeforePagePaint(ByVal sender As Object, ByVal e As DevExpress.XtraRichEdit.BeforePagePaintEventArgs)
             If e.CanvasOwnerType = DevExpress.XtraRichEdit.API.Layout.CanvasOwnerType.Printer Then
                 Return
@@ -57,7 +58,7 @@ Namespace LineNumberingExample
             customPagePainter.LineNumberPadding = 60
             e.Painter = customPagePainter
         End Sub
-        #End Region ' #BeforePagePaint
+#End Region ' #BeforePagePaint
 
         Private Sub barCheckLineNumberBackColoring_CheckedChanged(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles barCheckLineNumberBackColoring.CheckedChanged
             If barCheckLineNumberBackColoring.Checked Then
@@ -68,21 +69,21 @@ Namespace LineNumberingExample
             richEditControl1.Refresh()
         End Sub
 
-        #Region "#DocumentFormatted"
+#Region "#DocumentFormatted"
         Private Sub DocumentLayout_DocumentFormatted(ByVal sender As Object, ByVal e As EventArgs)
             Me.BeginInvoke(CType(Sub()
-                If Me.Visible Then
-                    Dim visitor As New MyLayoutVisitor(richEditControl1.Document)
-                    Dim pageCount As Integer = richEditControl1.DocumentLayout.GetFormattedPageCount()
+                                     If Me.Visible Then
+                                         Dim visitor As New MyLayoutVisitor(richEditControl1.Document)
+                                         Dim pageCount As Integer = richEditControl1.DocumentLayout.GetFormattedPageCount()
 
-                    For i As Integer = 0 To pageCount - 1
-                        visitor.Visit(richEditControl1.DocumentLayout.GetPage(i))
-                    Next i
-                    resultBarStaticItem.Caption = String.Format("Document has {0} lines", visitor.RowIndex)
-                End If
-            End Sub, MethodInvoker))
+                                         For i As Integer = 0 To pageCount - 1
+                                             visitor.Visit(richEditControl1.DocumentLayout.GetPage(i))
+                                         Next i
+                                         resultBarStaticItem.Caption = String.Format("Document has {0} lines", visitor.RowIndex)
+                                     End If
+                                 End Sub, MethodInvoker))
         End Sub
-        #End Region ' #DocumentFormatted
+#End Region ' #DocumentFormatted
 
     End Class
 End Namespace

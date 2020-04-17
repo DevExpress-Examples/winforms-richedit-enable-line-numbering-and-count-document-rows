@@ -1,5 +1,6 @@
 ﻿//using DevExpress.XtraRichEdit.API.Layout;
 //using DevExpress.XtraRichEdit.API.Native;
+using DevExpress.Portable;
 using DevExpress.XtraRichEdit;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,8 @@ namespace LineNumberingExample {
         private void RichEditControl1_DocumentLoaded(object sender, EventArgs e) {
             richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             #region #linenumbering
-            this.richEditControl1.Views.SimpleView.Padding = new System.Windows.Forms.Padding(60, 4, 4, 0);
-            this.richEditControl1.Views.DraftView.Padding = new System.Windows.Forms.Padding(60, 4, 4, 0);
+            this.richEditControl1.Views.SimpleView.Padding = new PortablePadding(60, 4, 4, 0);
+            this.richEditControl1.Views.DraftView.Padding = new PortablePadding(60, 4, 4, 0);
             richEditControl1.Views.SimpleView.AllowDisplayLineNumbers = true;
             richEditControl1.Views.DraftView.AllowDisplayLineNumbers = true;
 
