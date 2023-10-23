@@ -1,8 +1,10 @@
-﻿Imports System
+Imports System
 Imports DevExpress.XtraBars
 
 Namespace LineNumberingExample
-    Partial Public Class Form1
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -13,20 +15,20 @@ Namespace LineNumberingExample
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LineNumberingExample.Form1))
             Me.richEditControl1 = New DevExpress.XtraRichEdit.RichEditControl()
             Me.ribbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
             Me.undoItem1 = New DevExpress.XtraRichEdit.UI.UndoItem()
@@ -91,8 +93,8 @@ Namespace LineNumberingExample
             Me.optionsExampleRibbonPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
             Me.resultExampleRibbonPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
             Me.richEditBarController1 = New DevExpress.XtraRichEdit.UI.RichEditBarController()
-            CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.richEditBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.richEditBarController1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' richEditControl1
@@ -108,11 +110,11 @@ Namespace LineNumberingExample
             ' ribbonControl1
             ' 
             Me.ribbonControl1.ExpandCollapseItem.Id = 0
-            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() { Me.ribbonControl1.ExpandCollapseItem, Me.undoItem1, Me.redoItem1, Me.fileNewItem1, Me.fileOpenItem1, Me.fileSaveItem1, Me.fileSaveAsItem1, Me.quickPrintItem1, Me.printItem1, Me.printPreviewItem1, Me.showDocumentPropertiesFormItem1, Me.changeSectionPageMarginsItem1, Me.setNormalSectionPageMarginsItem1, Me.setNarrowSectionPageMarginsItem1, Me.setModerateSectionPageMarginsItem1, Me.setWideSectionPageMarginsItem1, Me.showPageMarginsSetupFormItem1, Me.changeSectionPageOrientationItem1, Me.setPortraitPageOrientationItem1, Me.setLandscapePageOrientationItem1, Me.changeSectionPaperKindItem1, Me.changeSectionColumnsItem1, Me.setSectionOneColumnItem1, Me.setSectionTwoColumnsItem1, Me.setSectionThreeColumnsItem1, Me.showColumnsSetupFormItem1, Me.insertBreakItem1, Me.insertPageBreakItem1, Me.insertColumnBreakItem1, Me.insertSectionBreakNextPageItem1, Me.insertSectionBreakEvenPageItem1, Me.insertSectionBreakOddPageItem1, Me.changeSectionLineNumberingItem1, Me.setSectionLineNumberingNoneItem1, Me.setSectionLineNumberingContinuousItem1, Me.setSectionLineNumberingRestartNewPageItem1, Me.setSectionLineNumberingRestartNewSectionItem1, Me.toggleParagraphSuppressLineNumbersItem1, Me.showLineNumberingFormItem1, Me.changePageColorItem1, Me.switchToSimpleViewItem1, Me.switchToDraftViewItem1, Me.switchToPrintLayoutViewItem1, Me.toggleShowHorizontalRulerItem1, Me.toggleShowVerticalRulerItem1, Me.zoomOutItem1, Me.zoomInItem1, Me.barCheckLineNumberBackColoring, Me.resultBarStaticItem})
+            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.undoItem1, Me.redoItem1, Me.fileNewItem1, Me.fileOpenItem1, Me.fileSaveItem1, Me.fileSaveAsItem1, Me.quickPrintItem1, Me.printItem1, Me.printPreviewItem1, Me.showDocumentPropertiesFormItem1, Me.changeSectionPageMarginsItem1, Me.setNormalSectionPageMarginsItem1, Me.setNarrowSectionPageMarginsItem1, Me.setModerateSectionPageMarginsItem1, Me.setWideSectionPageMarginsItem1, Me.showPageMarginsSetupFormItem1, Me.changeSectionPageOrientationItem1, Me.setPortraitPageOrientationItem1, Me.setLandscapePageOrientationItem1, Me.changeSectionPaperKindItem1, Me.changeSectionColumnsItem1, Me.setSectionOneColumnItem1, Me.setSectionTwoColumnsItem1, Me.setSectionThreeColumnsItem1, Me.showColumnsSetupFormItem1, Me.insertBreakItem1, Me.insertPageBreakItem1, Me.insertColumnBreakItem1, Me.insertSectionBreakNextPageItem1, Me.insertSectionBreakEvenPageItem1, Me.insertSectionBreakOddPageItem1, Me.changeSectionLineNumberingItem1, Me.setSectionLineNumberingNoneItem1, Me.setSectionLineNumberingContinuousItem1, Me.setSectionLineNumberingRestartNewPageItem1, Me.setSectionLineNumberingRestartNewSectionItem1, Me.toggleParagraphSuppressLineNumbersItem1, Me.showLineNumberingFormItem1, Me.changePageColorItem1, Me.switchToSimpleViewItem1, Me.switchToDraftViewItem1, Me.switchToPrintLayoutViewItem1, Me.toggleShowHorizontalRulerItem1, Me.toggleShowVerticalRulerItem1, Me.zoomOutItem1, Me.zoomInItem1, Me.barCheckLineNumberBackColoring, Me.resultBarStaticItem})
             Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
             Me.ribbonControl1.MaxItemId = 49
             Me.ribbonControl1.Name = "ribbonControl1"
-            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() { Me.fileRibbonPage1, Me.pageLayoutRibbonPage1, Me.viewRibbonPage1, Me.exampleRibbonPage1})
+            Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.fileRibbonPage1, Me.pageLayoutRibbonPage1, Me.viewRibbonPage1, Me.exampleRibbonPage1})
             Me.ribbonControl1.Size = New System.Drawing.Size(784, 139)
             ' 
             ' undoItem1
@@ -168,13 +170,7 @@ Namespace LineNumberingExample
             ' changeSectionPageMarginsItem1
             ' 
             Me.changeSectionPageMarginsItem1.Id = 11
-            Me.changeSectionPageMarginsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setNormalSectionPageMarginsItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setNarrowSectionPageMarginsItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setModerateSectionPageMarginsItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setWideSectionPageMarginsItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.showPageMarginsSetupFormItem1, True) _
-            })
+            Me.changeSectionPageMarginsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.setNormalSectionPageMarginsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setNarrowSectionPageMarginsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setModerateSectionPageMarginsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setWideSectionPageMarginsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.showPageMarginsSetupFormItem1, True)})
             Me.changeSectionPageMarginsItem1.Name = "changeSectionPageMarginsItem1"
             ' 
             ' setNormalSectionPageMarginsItem1
@@ -205,10 +201,7 @@ Namespace LineNumberingExample
             ' changeSectionPageOrientationItem1
             ' 
             Me.changeSectionPageOrientationItem1.Id = 17
-            Me.changeSectionPageOrientationItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setPortraitPageOrientationItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setLandscapePageOrientationItem1) _
-            })
+            Me.changeSectionPageOrientationItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.setPortraitPageOrientationItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setLandscapePageOrientationItem1)})
             Me.changeSectionPageOrientationItem1.Name = "changeSectionPageOrientationItem1"
             ' 
             ' setPortraitPageOrientationItem1
@@ -229,12 +222,7 @@ Namespace LineNumberingExample
             ' changeSectionColumnsItem1
             ' 
             Me.changeSectionColumnsItem1.Id = 21
-            Me.changeSectionColumnsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionOneColumnItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionTwoColumnsItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionThreeColumnsItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.showColumnsSetupFormItem1, True) _
-            })
+            Me.changeSectionColumnsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionOneColumnItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionTwoColumnsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionThreeColumnsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.showColumnsSetupFormItem1, True)})
             Me.changeSectionColumnsItem1.Name = "changeSectionColumnsItem1"
             ' 
             ' setSectionOneColumnItem1
@@ -260,13 +248,7 @@ Namespace LineNumberingExample
             ' insertBreakItem1
             ' 
             Me.insertBreakItem1.Id = 26
-            Me.insertBreakItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, Me.insertPageBreakItem1, "", False, True, True, 0, Nothing, DevExpress.XtraBars.BarItemPaintStyle.Standard, "B", ""), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.insertColumnBreakItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.insertSectionBreakNextPageItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.insertSectionBreakEvenPageItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.insertSectionBreakOddPageItem1) _
-            })
+            Me.insertBreakItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, Me.insertPageBreakItem1, "", False, True, True, 0, Nothing, DevExpress.XtraBars.BarItemPaintStyle.Standard, "B", ""), New DevExpress.XtraBars.LinkPersistInfo(Me.insertColumnBreakItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.insertSectionBreakNextPageItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.insertSectionBreakEvenPageItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.insertSectionBreakOddPageItem1)})
             Me.insertBreakItem1.Name = "insertBreakItem1"
             ' 
             ' insertPageBreakItem1
@@ -297,14 +279,7 @@ Namespace LineNumberingExample
             ' changeSectionLineNumberingItem1
             ' 
             Me.changeSectionLineNumberingItem1.Id = 32
-            Me.changeSectionLineNumberingItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingNoneItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingContinuousItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingRestartNewPageItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingRestartNewSectionItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.toggleParagraphSuppressLineNumbersItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.showLineNumberingFormItem1, True) _
-            })
+            Me.changeSectionLineNumberingItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingNoneItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingContinuousItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingRestartNewPageItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.setSectionLineNumberingRestartNewSectionItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.toggleParagraphSuppressLineNumbersItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.showLineNumberingFormItem1, True)})
             Me.changeSectionLineNumberingItem1.Name = "changeSectionLineNumberingItem1"
             ' 
             ' setSectionLineNumberingNoneItem1
@@ -382,10 +357,11 @@ Namespace LineNumberingExample
             Me.barCheckLineNumberBackColoring.Caption = "Line Number Column Coloring"
             Me.barCheckLineNumberBackColoring.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio
             Me.barCheckLineNumberBackColoring.Id = 47
-            Me.barCheckLineNumberBackColoring.ImageOptions.Image = (CType(resources.GetObject("barCheckLineNumberBackColoring.ImageOptions.Image"), System.Drawing.Image))
-            Me.barCheckLineNumberBackColoring.ImageOptions.LargeImage = (CType(resources.GetObject("barCheckLineNumberBackColoring.ImageOptions.LargeImage"), System.Drawing.Image))
+            Me.barCheckLineNumberBackColoring.ImageOptions.Image = CType((resources.GetObject("barCheckLineNumberBackColoring.ImageOptions.Image")), System.Drawing.Image)
+            Me.barCheckLineNumberBackColoring.ImageOptions.LargeImage = CType((resources.GetObject("barCheckLineNumberBackColoring.ImageOptions.LargeImage")), System.Drawing.Image)
             Me.barCheckLineNumberBackColoring.Name = "barCheckLineNumberBackColoring"
             Me.barCheckLineNumberBackColoring.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+            AddHandler Me.barCheckLineNumberBackColoring.CheckedChanged, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.barCheckLineNumberBackColoring_CheckedChanged)
             ' 
             ' resultBarStaticItem
             ' 
@@ -395,7 +371,7 @@ Namespace LineNumberingExample
             ' 
             ' fileRibbonPage1
             ' 
-            Me.fileRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.commonRibbonPageGroup1, Me.infoRibbonPageGroup1})
+            Me.fileRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.commonRibbonPageGroup1, Me.infoRibbonPageGroup1})
             Me.fileRibbonPage1.Name = "fileRibbonPage1"
             ' 
             ' commonRibbonPageGroup1
@@ -418,7 +394,7 @@ Namespace LineNumberingExample
             ' 
             ' pageLayoutRibbonPage1
             ' 
-            Me.pageLayoutRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.pageSetupRibbonPageGroup1, Me.pageBackgroundRibbonPageGroup1})
+            Me.pageLayoutRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.pageSetupRibbonPageGroup1, Me.pageBackgroundRibbonPageGroup1})
             Me.pageLayoutRibbonPage1.Name = "pageLayoutRibbonPage1"
             ' 
             ' pageSetupRibbonPageGroup1
@@ -439,7 +415,7 @@ Namespace LineNumberingExample
             ' 
             ' viewRibbonPage1
             ' 
-            Me.viewRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.documentViewsRibbonPageGroup1, Me.showRibbonPageGroup1, Me.zoomRibbonPageGroup1})
+            Me.viewRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.documentViewsRibbonPageGroup1, Me.showRibbonPageGroup1, Me.zoomRibbonPageGroup1})
             Me.viewRibbonPage1.Name = "viewRibbonPage1"
             ' 
             ' documentViewsRibbonPageGroup1
@@ -463,7 +439,7 @@ Namespace LineNumberingExample
             ' 
             ' exampleRibbonPage1
             ' 
-            Me.exampleRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() { Me.optionsExampleRibbonPageGroup, Me.resultExampleRibbonPageGroup})
+            Me.exampleRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.optionsExampleRibbonPageGroup, Me.resultExampleRibbonPageGroup})
             Me.exampleRibbonPage1.Name = "exampleRibbonPage1"
             Me.exampleRibbonPage1.Text = "Example"
             ' 
@@ -538,79 +514,140 @@ Namespace LineNumberingExample
             Me.Controls.Add(Me.ribbonControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.richEditBarController1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.richEditBarController1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
-
         End Sub
 
-        #End Region
-
+#End Region
         Private richEditControl1 As DevExpress.XtraRichEdit.RichEditControl
+
         Private ribbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+
         Private undoItem1 As DevExpress.XtraRichEdit.UI.UndoItem
+
         Private redoItem1 As DevExpress.XtraRichEdit.UI.RedoItem
+
         Private fileNewItem1 As DevExpress.XtraRichEdit.UI.FileNewItem
+
         Private fileOpenItem1 As DevExpress.XtraRichEdit.UI.FileOpenItem
+
         Private fileSaveItem1 As DevExpress.XtraRichEdit.UI.FileSaveItem
+
         Private fileSaveAsItem1 As DevExpress.XtraRichEdit.UI.FileSaveAsItem
+
         Private quickPrintItem1 As DevExpress.XtraRichEdit.UI.QuickPrintItem
+
         Private printItem1 As DevExpress.XtraRichEdit.UI.PrintItem
+
         Private printPreviewItem1 As DevExpress.XtraRichEdit.UI.PrintPreviewItem
+
         Private showDocumentPropertiesFormItem1 As DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem
+
         Private changeSectionPageMarginsItem1 As DevExpress.XtraRichEdit.UI.ChangeSectionPageMarginsItem
+
         Private setNormalSectionPageMarginsItem1 As DevExpress.XtraRichEdit.UI.SetNormalSectionPageMarginsItem
+
         Private setNarrowSectionPageMarginsItem1 As DevExpress.XtraRichEdit.UI.SetNarrowSectionPageMarginsItem
+
         Private setModerateSectionPageMarginsItem1 As DevExpress.XtraRichEdit.UI.SetModerateSectionPageMarginsItem
+
         Private setWideSectionPageMarginsItem1 As DevExpress.XtraRichEdit.UI.SetWideSectionPageMarginsItem
+
         Private showPageMarginsSetupFormItem1 As DevExpress.XtraRichEdit.UI.ShowPageMarginsSetupFormItem
+
         Private changeSectionPageOrientationItem1 As DevExpress.XtraRichEdit.UI.ChangeSectionPageOrientationItem
+
         Private setPortraitPageOrientationItem1 As DevExpress.XtraRichEdit.UI.SetPortraitPageOrientationItem
+
         Private setLandscapePageOrientationItem1 As DevExpress.XtraRichEdit.UI.SetLandscapePageOrientationItem
+
         Private changeSectionPaperKindItem1 As DevExpress.XtraRichEdit.UI.ChangeSectionPaperKindItem
+
         Private changeSectionColumnsItem1 As DevExpress.XtraRichEdit.UI.ChangeSectionColumnsItem
+
         Private setSectionOneColumnItem1 As DevExpress.XtraRichEdit.UI.SetSectionOneColumnItem
+
         Private setSectionTwoColumnsItem1 As DevExpress.XtraRichEdit.UI.SetSectionTwoColumnsItem
+
         Private setSectionThreeColumnsItem1 As DevExpress.XtraRichEdit.UI.SetSectionThreeColumnsItem
+
         Private showColumnsSetupFormItem1 As DevExpress.XtraRichEdit.UI.ShowColumnsSetupFormItem
+
         Private insertBreakItem1 As DevExpress.XtraRichEdit.UI.InsertBreakItem
+
         Private insertPageBreakItem1 As DevExpress.XtraRichEdit.UI.InsertPageBreakItem
+
         Private insertColumnBreakItem1 As DevExpress.XtraRichEdit.UI.InsertColumnBreakItem
+
         Private insertSectionBreakNextPageItem1 As DevExpress.XtraRichEdit.UI.InsertSectionBreakNextPageItem
+
         Private insertSectionBreakEvenPageItem1 As DevExpress.XtraRichEdit.UI.InsertSectionBreakEvenPageItem
+
         Private insertSectionBreakOddPageItem1 As DevExpress.XtraRichEdit.UI.InsertSectionBreakOddPageItem
+
         Private changeSectionLineNumberingItem1 As DevExpress.XtraRichEdit.UI.ChangeSectionLineNumberingItem
+
         Private setSectionLineNumberingNoneItem1 As DevExpress.XtraRichEdit.UI.SetSectionLineNumberingNoneItem
+
         Private setSectionLineNumberingContinuousItem1 As DevExpress.XtraRichEdit.UI.SetSectionLineNumberingContinuousItem
+
         Private setSectionLineNumberingRestartNewPageItem1 As DevExpress.XtraRichEdit.UI.SetSectionLineNumberingRestartNewPageItem
+
         Private setSectionLineNumberingRestartNewSectionItem1 As DevExpress.XtraRichEdit.UI.SetSectionLineNumberingRestartNewSectionItem
+
         Private toggleParagraphSuppressLineNumbersItem1 As DevExpress.XtraRichEdit.UI.ToggleParagraphSuppressLineNumbersItem
+
         Private showLineNumberingFormItem1 As DevExpress.XtraRichEdit.UI.ShowLineNumberingFormItem
+
         Private changePageColorItem1 As DevExpress.XtraRichEdit.UI.ChangePageColorItem
+
         Private switchToSimpleViewItem1 As DevExpress.XtraRichEdit.UI.SwitchToSimpleViewItem
+
         Private switchToDraftViewItem1 As DevExpress.XtraRichEdit.UI.SwitchToDraftViewItem
+
         Private switchToPrintLayoutViewItem1 As DevExpress.XtraRichEdit.UI.SwitchToPrintLayoutViewItem
+
         Private toggleShowHorizontalRulerItem1 As DevExpress.XtraRichEdit.UI.ToggleShowHorizontalRulerItem
+
         Private toggleShowVerticalRulerItem1 As DevExpress.XtraRichEdit.UI.ToggleShowVerticalRulerItem
+
         Private zoomOutItem1 As DevExpress.XtraRichEdit.UI.ZoomOutItem
+
         Private zoomInItem1 As DevExpress.XtraRichEdit.UI.ZoomInItem
+
         Private fileRibbonPage1 As DevExpress.XtraRichEdit.UI.FileRibbonPage
+
         Private commonRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup
+
         Private infoRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.InfoRibbonPageGroup
+
         Private pageLayoutRibbonPage1 As DevExpress.XtraRichEdit.UI.PageLayoutRibbonPage
+
         Private pageSetupRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.PageSetupRibbonPageGroup
+
         Private pageBackgroundRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.PageBackgroundRibbonPageGroup
+
         Private viewRibbonPage1 As DevExpress.XtraRichEdit.UI.ViewRibbonPage
+
         Private documentViewsRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.DocumentViewsRibbonPageGroup
+
         Private showRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup
+
         Private zoomRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup
+
         Private richEditBarController1 As DevExpress.XtraRichEdit.UI.RichEditBarController
-        Private WithEvents barCheckLineNumberBackColoring As DevExpress.XtraBars.BarCheckItem
+
+        Private barCheckLineNumberBackColoring As DevExpress.XtraBars.BarCheckItem
+
         Private exampleRibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+
         Private optionsExampleRibbonPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+
         Private resultExampleRibbonPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-        Private resultBarStaticItem As BarStaticItem
+
+        Private resultBarStaticItem As DevExpress.XtraBars.BarStaticItem
     End Class
 End Namespace
-

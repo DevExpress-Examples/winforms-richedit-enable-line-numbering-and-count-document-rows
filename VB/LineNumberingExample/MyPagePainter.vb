@@ -1,15 +1,18 @@
-﻿Imports DevExpress.XtraRichEdit
+Imports DevExpress.XtraRichEdit
 Imports DevExpress.XtraRichEdit.API.Layout
 Imports DevExpress.XtraRichEdit.API.Native
 Imports System.Drawing
 
 Namespace LineNumberingExample
-    #Region "#MyPagePainter"
+
+#Region "#MyPagePainter"
     Public Class MyPagePainter
         Inherits PagePainter
 
         Private richEditControl As RichEditControl
+
         Private previousColumnIndex As Integer = -1
+
         Private lineNumberFont As Font
 
         Public Sub New(ByVal richEdit As RichEditControl)
@@ -26,11 +29,15 @@ Namespace LineNumberingExample
             NumberingFontColor = If(style.ForeColor, Color.Black)
         End Sub
 
-        Public Property NumberingFontName() As String
-        Public Property NumberingFontSize() As Single
-        Public Property NumberingFontColor() As Color
-        Public Property NumberingHighlightColor() As Color
-        Public Property LineNumberPadding() As Integer
+        Public Property NumberingFontName As String
+
+        Public Property NumberingFontSize As Single
+
+        Public Property NumberingFontColor As Color
+
+        Public Property NumberingHighlightColor As Color
+
+        Public Property LineNumberPadding As Integer
 
         Public Overrides Sub DrawPage(ByVal page As LayoutPage)
             lineNumberFont = New Font(NumberingFontName, NumberingFontSize, FontStyle.Regular)
@@ -39,11 +46,12 @@ Namespace LineNumberingExample
         End Sub
 
         Public Overrides Sub DrawPageArea(ByVal pageArea As LayoutPageArea)
-            Dim lineNumberBounds As New Rectangle(New Point(-LineNumberPadding, 0), New Size(LineNumberPadding, pageArea.Bounds.Height))
+            Dim lineNumberBounds As Rectangle = New Rectangle(New Point(-LineNumberPadding, 0), New Size(LineNumberPadding, pageArea.Bounds.Height))
             Canvas.FillRectangle(New RichEditBrush(NumberingHighlightColor), lineNumberBounds)
             MyBase.DrawPageArea(pageArea)
             previousColumnIndex = -1
         End Sub
+
         Public Overrides Sub DrawColumn(ByVal column As LayoutColumn)
             Dim pageArea As LayoutPageArea = column.GetParentByType(Of LayoutPageArea)()
             If pageArea IsNot Nothing Then
@@ -51,23 +59,26 @@ Namespace LineNumberingExample
                 If previousColumnIndex >= 0 Then
                     leftBoundary = pageArea.Columns(previousColumnIndex).Bounds.Right
                 End If
+
                 If column.LineNumbers.Count > 0 Then
                     HighlightLineNumberingArea(column, leftBoundary)
                 End If
+
                 previousColumnIndex += 1
             End If
+
             MyBase.DrawColumn(column)
         End Sub
 
         Public Overrides Sub DrawLineNumberBox(ByVal lineNumberBox As LineNumberBox)
-            Canvas.DrawString(lineNumberBox.Text, lineNumberFont, New RichEditBrush(NumberingFontColor), lineNumberBox.Bounds, Me.richEditControl.LayoutUnit)
+            Canvas.DrawString(lineNumberBox.Text, lineNumberFont, New RichEditBrush(NumberingFontColor), lineNumberBox.Bounds, richEditControl.LayoutUnit)
         End Sub
 
         Private Sub HighlightLineNumberingArea(ByVal column As LayoutColumn, ByVal leftBoundary As Integer)
-                Dim page As LayoutPage = column.GetParentByType(Of LayoutPage)()
-            Dim marginBounds As New Rectangle(New Point(leftBoundary, 0), New Size(column.Bounds.X - leftBoundary, page.Bounds.Height))
+            Dim page As LayoutPage = column.GetParentByType(Of LayoutPage)()
+            Dim marginBounds As Rectangle = New Rectangle(New Point(leftBoundary, 0), New Size(column.Bounds.X - leftBoundary, page.Bounds.Height))
             Canvas.FillRectangle(New RichEditBrush(NumberingHighlightColor), marginBounds)
         End Sub
     End Class
-    #End Region ' #MyPagePainter
+#End Region  ' #MyPagePainter
 End Namespace

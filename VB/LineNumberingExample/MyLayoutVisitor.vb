@@ -1,26 +1,28 @@
-﻿Imports DevExpress.XtraRichEdit.API.Layout
+Imports DevExpress.XtraRichEdit.API.Layout
 Imports DevExpress.XtraRichEdit.API.Native
-Imports System
 
 Namespace LineNumberingExample
-    #Region "#MyLayoutVisitor"
+
+#Region "#MyLayoutVisitor"
     Public Class MyLayoutVisitor
         Inherits LayoutVisitor
 
+        Private _RowIndex As Integer
+
         Private document As Document
 
-        Private privateRowIndex As Integer
-        Public Property RowIndex() As Integer
+        Public Property RowIndex As Integer
             Get
-                Return privateRowIndex
+                Return _RowIndex
             End Get
+
             Private Set(ByVal value As Integer)
-                privateRowIndex = value
+                _RowIndex = value
             End Set
         End Property
 
         Public Sub New(ByVal doc As Document)
-            Me.document = doc
+            document = doc
             RowIndex = 0
         End Sub
 
@@ -29,5 +31,5 @@ Namespace LineNumberingExample
             MyBase.VisitRow(row)
         End Sub
     End Class
-    #End Region ' #MyLayoutVisitor
+#End Region  ' #MyLayoutVisitor
 End Namespace
